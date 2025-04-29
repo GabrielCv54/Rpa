@@ -9,4 +9,4 @@ html='''
 
 soup = BeautifulSoup(html,'html.parser')
 print(soup.h1.text)
-print(soup.findAll('p').text)
+print(soup.find('p').text)

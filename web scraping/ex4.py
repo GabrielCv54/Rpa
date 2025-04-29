@@ -5,7 +5,7 @@ coletar os titutlos de livros
 import requests
 from bs4 import BeautifulSoup
 
-url_books = 'https://books.toscrape.com/'
+url_books = 'https://books.toscrape.com'
 response = requests.get(url_books)
 soup = BeautifulSoup(response.text,'html.parser')
 
