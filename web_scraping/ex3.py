@@ -13,12 +13,12 @@ soup = BeautifulSoup(response.text,'html.parser')
 for phrase in soup.find_all('span',class_='text'):
     print(phrase.text)'''
 
-url = 'https://www.marvel.com/explore'
+url = 'https://www.cursoemvideo.com/cursos/'
 response = r.get(url)
 
 soup = BeautifulSoup(response.text , 'html.parser')
 
-characters = soup.find_all('a',class_='explore__link')
+characters = soup.find_all('div',class_='fl-row-content-wrap')
 
 for character in characters:
     print(character.text.strip())

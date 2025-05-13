@@ -1,7 +1,7 @@
 import requests as r
 
-response = r.get('https://dattebayo-api.onrender.com/characters/547')
-print(response.status_code)
+response = r.get('https://dattebayo-api.onrender.com/characters/10')
+print(response.json())
 
 
 '''url = 'https://httpbin.org/post'
