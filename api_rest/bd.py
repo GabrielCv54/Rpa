@@ -13,7 +13,7 @@ import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8')
 
 #1
-country ='Japan'
+country ='Germany'
 url = f'https://restcountries.com/v3.1/name/{country}'
 response = r.get(url)
 data = response.json()
