@@ -3,7 +3,7 @@ import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='UTF-8')
 
-code = "USA"
+code = "CAN"
 url= f'https://restcountries.com/v3.1/alpha/{code}'
 response = r.get(url)
 data = response.json()
