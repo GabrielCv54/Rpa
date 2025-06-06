@@ -1,0 +1,25 @@
+# Ignorar pastas de cache do Python
+__pycache__/
+
+# Ignorar arquivos de cache do Python
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Arquivos de log
+*.log
+
+
+# Arquivos de configuração de IDEs (Ex: VS Code, PyCharm)
+.idea/
+.vscode/
+*.iml
+
+# Arquivos temporários e de backup
+*~
+*.bak
