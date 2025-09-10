@@ -21,7 +21,7 @@ try:
     message['To'] = ", ".join(recipient)
     message['Subject'] = 'Smtplib email'
 
-    body = 'Estou enviando um segundo email para realizqr o envio desse email'
+    body = 'Estou enviando um segundo email para realizar o envio desse email'
     message.attach(MIMEText(body,'plain'))
 
     #Enviar o email
