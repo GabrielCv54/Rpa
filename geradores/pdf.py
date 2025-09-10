@@ -1,6 +1,6 @@
 from reportlab.pdfgen import canvas
 
-#1 - Criar o arquivo pdf
+'''#1 - Criar o arquivo pdf
 pdf = canvas.Canvas("exemplo.pdf")
 
 #2 - Definir um título
@@ -31,4 +31,8 @@ for act in activity:
 
 #6 - Salva
 pdf.save()
-print("Arquivo salvo com sucesso !!")
+print("Arquivo salvo com sucesso !!")'''
+
+
+c = canvas.Canvas('texto.pdf')
+c.drawString(100,250,'Este é um pdf que está sendo gerado com a biblioteca reportlab')
