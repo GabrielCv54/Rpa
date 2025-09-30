@@ -27,3 +27,4 @@ for cont,mess in combo:
     p.press('enter')
     time.sleep(7)
     p.hotkey('ctrl','w')
+    
