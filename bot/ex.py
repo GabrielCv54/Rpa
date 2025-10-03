@@ -1,13 +1,14 @@
 import pyautogui as p
 import time 
 import webbrowser as web
-import openpyxl as op
+from bs4 import BeautifulSoup
+
 """ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager 
+from web_driver.chrome import ChromeDriverManager 
 
 service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)"""
+driver = webdriver.Chrome(service=service) """
 
 
 # ---- Funções usadas para manipulação do Whatsapp
@@ -39,7 +40,6 @@ def escrever_mensagem():
     time.sleep(3)
     p.press('enter')
     print('Mensagem foi enviada com sucesso!✅')
-    # continue a escrita partir de aqui
 
 
 def trocar_foto():
@@ -65,16 +65,62 @@ def trocar_foto():
 
 def ver_status():
     p.moveTo(39,305)
-    time.sleep(7)
+    time.sleep(5)
     p.click()
     time.sleep(5)
-    p.moveTo(168,396)
+    p.hotkey('ctrl','t')
+    time.sleep(5)
+    p.hotkey('ctrl','l')
+    time.sleep(5)
+    p.write('https://web.whatsapp.com')
+    time.sleep(3)
+    p.press('enter')
+    time.sleep(7)
+    p.moveTo(40,200)
+    p.click()
+    time.sleep(5)
+    p.moveTo(186,391)
     p.click()
     while True:
+     time.sleep(5)
      p.press('right')
+     break
+    
+    print("Todos os status visualizados com sucesso!✅")
 
 def visualizar_grupos():
-    pass
+    p.moveTo(39,305)
+    time.sleep(5)
+    p.click()
+    time.sleep(6)
+    p.moveTo(411,274)
+    p.click()
+    time.sleep(5)
+
+
+def adicionar_novo_contato():
+    name = str(input('Novo contato: '))
+    contact = int(input('Qual o número do telefone?: '))
+    """isSurname = str(input(("Deseja colocar sobrenome?: ")))
+    if isSurname == 'nao':
+        pass
+    else:
+     surname = str(input('Sobrenome: '))  """
+
+    p.PAUSE = 5
+    time.sleep(3)
+    p.moveTo(801,1042)
+    p.click()
+    time.sleep(4.5)
+    p.write(name,interval=0.1)
+    time.sleep(4)
+    p.moveTo(309,479)
+    p.click()
+    time.sleep(3)
+    p.write(contact,interval=0.2)
+    time.sleep(3)
+
+
 
 if __name__ == '__main__':
     what = int(input('O que se deseja fazer?: '))
@@ -87,6 +133,7 @@ if __name__ == '__main__':
     elif what == 4:
         visualizar_grupos()
     elif what == 5:
-        pass
-
-""" print(__name__) """
+        adicionar_novo_contato()
+    elif what == 6:
+        print('Automação Whatsapp finalizada!!!💾✉️')
+        
